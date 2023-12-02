@@ -1,0 +1,145 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    /* Fundo escuro */
+    color: #ffffff;
+    /* Texto claro */
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    color: #0d6efd;
+    /* Azul claro */
+}
+
+#dados-enviados {
+    background-color: #232323;
+    /* Fundo um pouco mais claro que o do body */
+    color: #ffffff;
+    /* Texto claro */
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+p {
+    font-size: 1em;
+    margin-bottom: 0.5rem;
+    padding: 0.375rem 0;
+    border-bottom: 1px solid #343a40;
+    /* Divisor sutil */
+}
+
+p strong {
+    color: #0d6efd;
+    /* Azul claro para destaque */
+}
+
+.back-button {
+    display: inline-block;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    color: #ffffff;
+    /* Texto claro */
+    background-color: #0d6efd;
+    /* Azul claro */
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 2rem;
+    transition: background-color 0.15s ease-in-out;
+}
+
+.back-button:hover {
+    background-color: #1a5cb8;
+    /* Azul um pouco mais escuro */
+}
+
+
+.buttons-container {
+    position: fixed;
+    /* Ou 'absolute' se você não quiser que fique visível o tempo todo durante a rolagem */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    /* Centraliza os botões na horizontal */
+    align-items: center;
+    /* Centraliza os botões na vertical */
+    padding: 10px;
+    /* Adiciona um pouco de espaço ao redor dos botões */
+    background: #333;
+    /* Uma cor de fundo para combinar com o seu tema, se necessário */
+}
+
+#excluir-todos,
+.back-button {
+    padding: 10px 20px;
+    /* Espaçamento interno para fazer parecer um botão */
+    margin: 0 10px;
+    /* Margem entre os botões */
+    font-size: 1rem;
+    color: white;
+    /* Define a cor do texto */
+    background-color: #D32F2F;
+    /* Cor de fundo para ambos os botões */
+    border: none;
+    border-radius: 5px;
+    /* Bordas arredondadas */
+    cursor: pointer;
+    /* Cursor de mão ao passar o mouse */
+    font-weight: bold;
+    /* Fonte em negrito */
+    text-transform: uppercase;
+    /* Texto em maiúsculas */
+    text-decoration: none;
+    /* Remove o sublinhado dos links */
+    transition: background-color 0.15s ease-in-out;
+}
+
+#excluir-todos:hover,
+.back-button:hover {
+    background-color: #B71C1C;
+    /* Cor de fundo para o efeito hover */
+}
+
+#excluir-todos:disabled,
+.back-button:disabled {
+    background-color: #757575;
+    /* Uma cor de fundo mais clara */
+    color: #BDBDBD;
+    /* Cor do texto mais clara */
+    cursor: not-allowed;
+    /* Cursor indicando que o botão está desativado */
+    border: 1px solid #9E9E9E;
+    /* Borda opcional para definir claramente os limites do botão */
+}
+
+#search-container {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+#search-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Ajuste de responsividade */
+@media (max-width: 768px) {
+    #dados-enviados {
+        width: 90%;
+        padding: 1rem;
+    }
+}

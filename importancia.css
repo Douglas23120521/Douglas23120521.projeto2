@@ -1,0 +1,32 @@
+/* Estilos para a seção de conteúdo da página de importância */
+.content {
+    max-width: 800px; /* Define uma largura máxima para o conteúdo */
+    margin: 40px auto; /* Centraliza na página e adiciona margem superior e inferior */
+    padding: 20px; /* Adiciona padding interno */
+    background-color: #232323; /* Cor de fundo escura para o conteúdo */
+    color: #ffffff; /* Cor clara para o texto */
+    border-radius: 8px; /* Bordas arredondadas para um visual suave */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Sombra suave para dar profundidade */
+}
+
+.content h1 {
+    color: #0d6efd; /* Cor azul claro para o título, alinhada com o tema da referência */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    text-align: center; /* Centraliza o título */
+}
+
+.content img {
+    width: 100%; /* Faz com que a imagem ocupe toda a largura disponível */
+    max-width: 400px; /* Define uma largura máxima para a imagem */
+    display: block; /* Exibe a imagem como bloco */
+    margin: 20px auto; /* Centraliza a imagem e adiciona margem acima e abaixo */
+    border-radius: 4px; /* Bordas arredondadas para a imagem */
+    border: 1px solid #343a40; /* Borda sutil para a imagem */
+}
+
+.content p {
+    text-align: justify; /* Justifica o texto para uma leitura mais formal */
+    line-height: 1.8; /* Aumenta a linha para melhorar a legibilidade */
+    margin-bottom: 20px; /* Adiciona espaço abaixo de cada parágrafo */
+}
+

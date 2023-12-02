@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados do Formulário</title>
+    <link rel="stylesheet" href="paginaDados.css">
+</head>
+
+<body>
+
+    <h1>Dados Enviados</h1>
+
+
+    <ul id="dados-enviados"></ul>
+    <div class="buttons-container">
+        <button id="excluir-todos" onclick="excluirTodos()">Excluir Todos</button>
+        <a href="formulario.html" class="back-button">Voltar ao Formulário</a>
+    </div>
+    <!-- Campo de pesquisa para filtrar os dados enviados -->
+    <div id="search-container">
+        <input type="text" id="search-input" placeholder="Pesquisar..." oninput="filtrarDados()">
+    </div>
+    <script>
+        function mostrarDados(dadosParaMostrar) {
+            var lista = document.getElementById('dados-enviados');
+            lista.innerHTML = ''; // Limpa a lista antes de adicionar novos itens
+
+            dadosParaMostrar.forEach(function (dado, index) {
+                var listItem = document.createElement('li');
+                listItem.textContent = `Data de Envio: ${dado.dataEnvio}, Nome: ${dado.nome}, Email: ${dado.email}`;
+
+                var deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Excluir';
+                deleteButton.onclick = function () { excluirItem(index); };
+
+                listItem.appendChild(deleteButton);
+                lista.appendChild(listItem);
+            });
+
+            if (dadosParaMostrar.length === 0) {
+                lista.innerHTML = '<li>Nenhum dado foi enviado ou encontrado.</li>';
+            }
+        }
+
+        // Esta função é chamada ao carregar a página
+        window.onload = function () {
+            mostrarDados(JSON.parse(localStorage.getItem('dadosFormulario')) || []);
+        };
+
+        // A função `excluirItem()` precisa chamar `mostrarDados()` passando os dados atualizados
+        function excluirItem(index) {
+            var dados = JSON.parse(localStorage.getItem('dadosFormulario')) || [];
+            dados.splice(index, 1);
+            localStorage.setItem('dadosFormulario', JSON.stringify(dados));
+            mostrarDados(dados); // Chame mostrarDados() com os dados atualizados
+        }
+
+        function excluirTodos() {
+            localStorage.removeItem('dadosFormulario'); // Remove o item do localStorage completamente
+            mostrarDados(); // Atualiza a lista na tela, que agora estará vazia
+        }
+        window.onload = function () {
+            mostrarDados(JSON.parse(localStorage.getItem('dadosFormulario')) || []);
+        };
+    </script>
+</body>
+
+</html>

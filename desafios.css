@@ -1,0 +1,39 @@
+/* Estilos específicos para a página de desafios */
+.content {
+    max-width: 800px; /* Define uma largura máxima para o conteúdo */
+    margin: 60px auto 40px; /* Margem superior maior para compensar o menu fixo */
+    padding: 20px; /* Padding interno */
+    background-color: #232323; /* Cor de fundo escura */
+    color: #ffffff; /* Cor do texto clara para contraste */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Sombra adaptada para o tema escuro */
+}
+
+.content h1 {
+    color: #0d6efd; /* Cor azul claro para o título, harmonizando com o tema escuro */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    text-align: center; /* Centraliza o título */
+}
+
+.content img {
+    width: 100%; /* A imagem ocupa toda a largura disponível */
+    max-width: 400px; /* Largura máxima para a imagem */
+    display: block; /* A imagem é tratada como bloco */
+    margin: 20px auto; /* Centraliza a imagem e adiciona margem acima e abaixo */
+    border-radius: 4px; /* Bordas arredondadas na imagem */
+    border: 1px solid #343a40; /* Borda sutil para destacar a imagem */
+}
+
+.content p {
+    text-align: justify; /* Justifica o texto */
+    line-height: 1.8; /* Linha mais espaçada para legibilidade */
+    margin-bottom: 20px; /* Margem abaixo de cada parágrafo */
+}
+
+/* Pode-se adicionar media queries para responsividade */
+@media (max-width: 768px) {
+    .content {
+        width: 90%; /* Largura um pouco maior para telas pequenas */
+        margin-top: 60px; /* Ajusta a margem superior */
+    }
+}

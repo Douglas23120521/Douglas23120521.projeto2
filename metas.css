@@ -1,0 +1,62 @@
+/* Conteúdo Principal */
+.content {
+    width: 80%;
+    margin: auto;
+    background-color: #232323; /* Cor de fundo escuro para o conteúdo */
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); /* Sombra para tema escuro */
+    border-radius: 10px;
+    margin-top: 20px;
+    color: #ffffff; /* Texto claro para contraste */
+}
+
+.content h1 {
+    margin-bottom: 20px;
+    color: #0d6efd; /* Cor azul clara para títulos */
+}
+
+.content img {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    border: 1px solid #343a40; /* Borda sutil para as imagens */
+}
+
+/* Estilos para a lista de metas */
+.content ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.content li {
+    background-color: #2d2d2d; /* Cor de fundo escuro para itens da lista */
+    margin-bottom: 10px;
+    padding: 10px;
+    border-left: 5px solid #0d6efd; /* Borda azul clara para destaque */
+    color: #ffffff; /* Texto claro para contraste */
+}
+
+.content li:hover {
+    background-color: #3d3d3d; /* Cor de fundo mais clara no hover para itens da lista */
+    border-left-color: #1a5cb8; /* Cor de borda mais escura no hover */
+}
+
+/* Adicionando um pouco de responsividade */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+
+    .content {
+        width: 95%;
+        margin-top: 10px;
+    }
+}
